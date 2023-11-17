@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: 
+      context: ../Nextjs13/next-blog-app
+      dockerfile: ../../Docker-config/Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../Nextjs13/next-blog-app:/usr/app
